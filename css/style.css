@@ -36,7 +36,9 @@ html{
 
 body{
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 
     width: 100%;
     min-height: 100vh;
@@ -46,10 +48,110 @@ body{
     background-color: rgb(240, 240, 240);
 }
 
+.start{
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: 100vh;
+
+    position: relative;
+}
+
+
+.info{
+    width: 100%;
+    min-height: 100vh;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+    position: relative;
+    
+    margin-bottom: 50px;
+    z-index: 10;
+}
+
+.info .buttons{
+    width: fit-content;
+    height: fit-content;
+    padding: 5px;
+    
+    display: flex;
+    flex-direction: row;
+
+    position: relative;
+}
+
+.info img{
+    height: 40vh;
+    object-fit: cover;
+
+    position: absolute;
+    z-index: 10;
+
+    bottom: 0;
+    transform: rotate(20deg);
+}
+
+.info .buttons button{
+    padding: 9px 13px 9px 13px;
+    
+    margin: 5px;
+    
+    font-size: 16px;
+    font-family: LexendMedium;
+    
+    border: none; 
+    border-radius: 3px;
+    
+    cursor: pointer;
+}
+
+.info .buttons button:nth-child(1){
+    background-color: transparent;
+    color: rgb(21, 21, 21);
+    user-select: none;
+    cursor: not-allowed;
+}
+
+.info .buttons button:nth-child(2){
+    background-color: rgb(24, 133, 250);
+    color: #fff;
+}
+
+/* .info .buttons button:nth-child(1):hover{
+    background-color: rgba(211, 226, 255, 0.672);
+} */
+
+.info .buttons button:nth-child(2):hover{
+    background-color: rgb(21, 119, 223);
+    color: #fff;
+}
+
+.info h1{
+    font-family: poppinsBold;
+    margin-bottom: 30px;
+    
+    text-align: center;
+    color: rgb(21, 21, 21);
+}
+
+.info p{
+    font-family: poppinsLight;
+    font-size: 14px;
+    line-height: 2;
+    
+    color: rgb(34, 34, 34);
+    text-align: justify;
+}
+
 .container{
     width: 90%;
     max-width: 1000px;
-    /* height: calc(100% -  80px); */
+    height: calc(100% -  80px);
 
     display: flex;
     justify-content: center;
@@ -59,110 +161,44 @@ body{
     position: relative;
 
     padding: 30px;
-
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
-
-    min-height: 100vh;
 }
 
-section{
-    height: 100vh;
-    scroll-snap-align: start;
-}
-
-.info{
+.container .description{
     width: 100%;
+    min-height: 30vh;
 
+    padding: 30px 0 30px 0;
     display: flex;
-    align-items: center;
     justify-content: center;
-    flex-direction: column;
-
-    position: relative;
-
-    margin-bottom: 50px;
-
-    padding-bottom: 30px;
+    align-items: center;
 }
 
-.info .buttons{
-    width: fit-content;
-    height: fit-content;
-    padding: 5px;
-
-    display: flex;
-    flex-direction: row;
-}
-
-.info .buttons button{
-    padding: 9px 13px 9px 13px;
-    
-    margin: 5px;
-
-    font-size: 16px;
+.container .description p{
     font-family: LexendMedium;
-
-    border: none; 
-    border-radius: 3px;
-
-    cursor: pointer;
-}
-
-.info .buttons button:nth-child(1){
-background-color: rgb(16, 16, 16);
-color: #fff;
-}
-
-.info .buttons button:nth-child(2){
-background-color: rgb(24, 133, 250);
-color: #fff;
-}
-
-
-
-.info::after{
-    content: '';
-
-    width: 100%;
-    height: 1px;
-    
-    background-color: rgb(179, 179, 179);
-
-    position: absolute;
-
-    bottom: 0;
-}
-
-.info h1{
-    font-family: poppinsBold;
-    margin-bottom: 30px;
-
-    text-align: center;
-}
-
-.info p{
-    font-family: poppinsLight;
-    font-size: 14px;
     line-height: 2;
-
-    color: rgb(34, 34, 34);
+    color: rgb(26, 26, 26);
     text-align: justify;
 }
 
+.container .description p span{
+    color: rgb(21, 119, 223);
+    font-weight: 600;
+}
+
+
 .flex{
     width: 100%;
-
+    
     height: 300px;
     min-height: 400px;
-
+    
     display: flex;
-
+    
     position: relative;
 
     margin-bottom: 50px;
     overflow: hidden;
-
+    
     padding: 20px 0 20px 0;
 
 }
@@ -213,15 +249,18 @@ color: #fff;
     padding: 20px;
 
     overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: ce;
 }
 
 .flex .image img{
-    border-radius: 10px;
+    
+    width: 80%;
+    height: 80%;
 
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .container .form{

@@ -8,28 +8,35 @@
         <link rel="stylesheet" href="css/style.css" type="text/css">
     </head>
     <body>
-    <div class="container">
-        <section class="one info">
-            <div class="title">
-                <h1>O que você sabe sobre África?</h1>
+        <div class="start">
+            <div class="info">
+                <div class="title">
+                    <h1>O que você sabe sobre África?</h1>
+                </div>
+                <div class="buttons">
+                    <button>Conheça</button>
+                    <button>Formulário</button>
+                </div>
+                <img src="img/res.png" alt="">
             </div>
-            <div class="buttons">
-                <button>Sobre</button>
-                <button>Formulário</button>
+        </div>
+        <div class="container">
+            <div class="description">
+                <p>Opa! Antes de qualquer coisa, deixe-nos fazer uma breve apresentação e dar uma explicação sobre o que é isso. Bem, nós somos alunos da Universidade Federal de Juiz de Fora e estamos coletando dados para produzir um  <span> documentário sobre História da África.</span> Todas as respostas são anônimas e, ao serem enviadas, poderão aparecer no documentário como texto ou dado estatístico.  Sua resposta é muito importante para nós e nosso único pedido é para que você <span>seja sincero. </span> O formulário estará disponível entre as datas <span> 27/06 até 18/07 </span></p>
             </div>
-            <!-- <div class="description">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id ullam iure, libero ex fugiat recusandae. Magnam excepturi velit rem veniam, harum id. Quo asperiores soluta pariatur, natus itaque incidunt nihil! Lorem ipsum dolor</p>
-            </div> -->
-        </section>
-        <section class="two">
             <div class="flex">
                 <div class="about">
                     <h1>Formulário</h1>
-                    <h2>Formulário info</h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid, placeat! Magni, quam numquam? Sapiente sint atque tempore voluptas possimus? Aperiam corporis facilis iusto. Consequuntur ab error nemo quibusdam, ut</p>
+                    <h2>Como funciona</h2>
+                    <p>O formulário é bem simples, você responde e a gente recebe :) 
+                        Apesar de não estar na página do google forms, os dados são
+                        enviados para lá, a escolha do site é uma questão mais estética.
+                        Adoraríamos que você respondesse por aqui, mas se preferir você
+                        pode acessar o link por  <a href="#">aqui</a>.
+                    </p>
                 </div>
                 <div class="image">
-                    <img src="img/african.jpg" alt="">
+                    <img src="img/form.svg" alt="">
                 </div>
             </div>
             <div class="flex">
@@ -42,59 +49,58 @@
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid, placeat! Magni, quam numquam? Sapiente sint atque tempore voluptas possimus? Aperiam corporis facilis iusto. Consequuntur ab error nemo quibusdam, ut</p>
                 </div>
             </div>
-        </section>
-        <div class="form">
-            <div class="title">
-                <h1>Formulário</h1>
-            </div>
-            <form action="">
-                <div class="pergunta">
-                    <p>Pergunta: Quantos anos você tem?</p>
+            <div class="form">
+                <div class="title">
+                    <h1>Formulário</h1>
                 </div>
-                <div class="resposta-radio">
-
-                    <label for="respA">
-                        <input type="radio" name="resposta1" id="respA">
-                        Abaixo de 14
-                    </label>
-
-                    <label for="respB">
-                        <input type="radio" name="resposta1" id="respB">
-                        Entre 14 e 17
-                    </label>
-
-                    <label for="respC">
-                        <input type="radio" name="resposta1" id="respC">
-                        Entre 17 e 20
-                    </label>
-
-                    <label for="respD">
-                        <input type="radio" name="resposta1" id="respD">
-                        Acima de 20
-                    </label>
-                </div>
-                <div class="pergunta">
-                    <p>Pergunta: Você está no Ensino Médio atualmente?</p>
-                </div>
-                <div class="resposta-radio">
-
-                    <label for="p2-respA">
-                        <input type="radio" name="resposta2" id="p2-respA">
-                        Sim
-                    </label>
-
-                    <label for="p2-respB">
-                        <input type="radio" name="resposta2" id="p2-respB">
-                        Não
-                    </label>
-                </div>
-                <div class="pergunta">
-                    <p>Pergunta: Reiciendis culpa quaerat at beatae similique quam nisi, aspernatur ducimus hic et qui amet numquam, distinctio id sapiente. Sit similique veritatis repellat?</p>
-                </div>
-                <div class="resposta">
-                    <input type="text" name="item2" autocomplete="off" required>
-                    <label class="label-name" for="item2">
-                        <span class="content-name">Resposta</span>
+                <form action="">
+                    <div class="pergunta">
+                        <p>Pergunta: Quantos anos você tem?</p>
+                    </div>
+                    <div class="resposta-radio">
+                        
+                        <label for="respA">
+                            <input type="radio" name="resposta1" id="respA">
+                            Abaixo de 14
+                        </label>
+                        
+                        <label for="respB">
+                            <input type="radio" name="resposta1" id="respB">
+                            Entre 14 e 17
+                        </label>
+                        
+                        <label for="respC">
+                            <input type="radio" name="resposta1" id="respC">
+                            Entre 17 e 20
+                        </label>
+                        
+                        <label for="respD">
+                            <input type="radio" name="resposta1" id="respD">
+                            Acima de 20
+                        </label>
+                    </div>
+                    <div class="pergunta">
+                        <p>Pergunta: Você está no Ensino Médio atualmente?</p>
+                    </div>
+                    <div class="resposta-radio">
+                        
+                        <label for="p2-respA">
+                            <input type="radio" name="resposta2" id="p2-respA">
+                            Sim
+                        </label>
+                        
+                        <label for="p2-respB">
+                            <input type="radio" name="resposta2" id="p2-respB">
+                            Não
+                        </label>
+                    </div>
+                    <div class="pergunta">
+                        <p>Pergunta: Reiciendis culpa quaerat at beatae similique quam nisi, aspernatur ducimus hic et qui amet numquam, distinctio id sapiente. Sit similique veritatis repellat?</p>
+                    </div>
+                    <div class="resposta">
+                        <input type="text" name="item2" autocomplete="off" required>
+                        <label class="label-name" for="item2">
+                            <span class="content-name">Resposta</span>
                     </label>
                 </div>
                 <div class="pergunta">
@@ -135,6 +141,7 @@
             </form>
         </div>
     </div>
+</div>
     <footer><p>@all rights reserved</p></footer>
     </body>
     <script src="js/app.js"></script>
