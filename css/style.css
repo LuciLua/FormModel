@@ -195,12 +195,15 @@ body{
 .flex{
     width: 100%;
     
-    height: 300px;
+    /* height: 300px; */
     min-height: 400px;
+    max-height: fit-content;
     
     display: flex;
     flex-direction: row;
-    
+    align-items: center;
+    justify-content: center;
+
     position: relative;
 
     margin-bottom: 50px;
@@ -279,6 +282,13 @@ body{
 
     object-fit: contain;
 }
+.flex .image:nth-child(2) img{
+    
+    width: 45%;
+    height: 45%;
+
+    object-fit: contain;
+}
 
 .container .form{
     width: 100%;
@@ -293,15 +303,18 @@ body{
     position: relative;
 
     background-color: #fff;
-    box-shadow: 0 0 14px rgba(202, 202, 202, 0.953) inset,
-    0 0 6px #fff;
+    box-shadow: 0 0 14px rgba(202, 202, 202, 0.953);
 
-    border-radius: 30px;
+    border-radius: 3px;
 
     margin-bottom: 80px;
-
 }
 
+.form .header-form{
+    width: 100%;
+    height: 200px;
+    border-bottom: 1px solid rgb(194, 194, 194);
+}
 
 
 .form .title{
@@ -507,13 +520,18 @@ footer p{
     position: relative;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 800px) {
     .start{
         padding: 10px;
     }
     .container{
-    padding: 5px;
+    padding: 0px;
+    width: 100%;
 
+    }
+
+    .flexes{
+    width: 85%;
     }
     .flex:nth-child(2){
         flex-direction: column;
@@ -533,15 +551,13 @@ footer p{
         display: flex;
         align-items: center;
         justify-content: center;
-
-
         padding: 5px;
     }
-
 
     .flex .about{
         width: 100%;
         height: 50%;
+
     }
     .flex .image{
         height: 50%;
@@ -556,5 +572,20 @@ footer p{
         min-width: 200px;
         max-width: 200px;
     }
+
+    .form{
+        width: 100%;
+    }
+
+    .form .pergunta{
+        width: 95%;
+        height: fit-content;
+        margin: 5px;
+    }
+
+    .form .resposta, .form .resposta-check, .form .resposta-radio{
+        width: 90%;
+    }
+
 
   }
