@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="css/style.css" type="text/css">
     </head>
     <body>
-        <div class="start">
+        <div class="start" id="start">
             <div class="info">
                 <div class="title">
                     <h1>O que você sabe sobre África?</h1>
@@ -56,27 +56,27 @@
                     </div>
                 </div>
                 <!-- inicio formulário -->
-                <form action="">
+                <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfRTj1N5-k_E8AsLSN_3M9pcVqriI77GcMsicY3mmcRfB6QaQ/formResponse" method="POST" target="prox">
                     <!-- pergunta 1 -->
                     <div class="pergunta">
                         <p>Pergunta: Quantos anos você tem?</p>
                     </div>
                     <!-- resposta 1 -->
                     <div class="resposta resposta-radio">
-                        <label for="respA">
-                            <input type="radio" name="resposta1" id="respA">
+                        <label for="respA" name="entry.1818396900">
+                            <input type="radio" name="entry.1818396900" id="respA" required value="Abaixo de 14">
                             Abaixo de 14
                         </label>
-                        <label for="respB">
-                            <input type="radio" name="resposta1" id="respB">
+                        <label for="respB" name="entry.1818396900">
+                            <input type="radio" name="entry.1818396900" id="respB" required value="Entre 14 e 17">
                             Entre 14 e 17
                         </label>
-                        <label for="respC">
-                            <input type="radio" name="resposta1" id="respC">
+                        <label for="respC" name="entry.1818396900">
+                            <input type="radio" name="entry.1818396900" id="respC" required value="Entre 17 e 20">
                             Entre 17 e 20
                         </label>
-                        <label for="respD">
-                            <input type="radio" name="resposta1" id="respD">
+                        <label for="respD" name="entry.1818396900">
+                            <input type="radio" name="entry.1818396900" id="respD" required value="Acima de 20">
                             Acima de 20
                         </label>
                     </div>
@@ -86,12 +86,12 @@
                     </div>
                     <!-- resposta 2 -->
                     <div class="resposta resposta-radio">  
-                        <label for="p2-respA">
-                            <input type="radio" name="resposta2" id="p2-respA">
+                        <label for="p2-respA" name="entry.1347901301">
+                            <input type="radio" name="entry.1347901301" id="p2-respA" required value="Sim">
                             Sim
                         </label>
-                        <label for="p2-respB">
-                            <input type="radio" name="resposta2" id="p2-respB">
+                        <label for="p2-respB" name="entry.1347901301">
+                            <input type="radio" name="entry.1347901301" id="p2-respB" required value="Não">
                             Não
                         </label>
                     </div>
@@ -101,8 +101,8 @@
                     </div>
                     <!-- resposta 3 -->
                     <div class="resposta resposta-text">
-                        <input type="text" name="item3" autocomplete="off" required>
-                        <label class="label-name" for="item3">
+                        <input type="text" name="entry.680610014" autocomplete="off" required id="entry.680610014">
+                        <label class="label-name" for="entry.680610014" name="entry.680610014">
                             <span class="content-name">Resposta</span>
                         </label>
                     </div>
@@ -112,23 +112,29 @@
                     </div>
                     <!-- resposta 4 -->
                     <div class="resposta resposta-check">
-                        <label for="check-r1" class="checks">
-                            <input type="checkbox" name="" id="check-r1"> <p>Resposta X</p>
+                        <label for="check-r1" class="checks" name="entry.1575771089">
+                            <input type="checkbox" name="entry.1575771089" id="check-r1" value="Resposta X"> <p>Resposta X</p>
                         </label>
-                        <label for="check-r2" class="checks">
-                            <input type="checkbox" name="" id="check-r2"> <p>Resposta Y</p>
+                        <label for="check-r2" class="checks" name="entry.1575771089_sentinel">
+                            <input type="checkbox" name="entry.1575771089" id="check-r2" value="Resposta Y"> <p>Resposta Y</p>
                         </label>
-                        <label for="check-r3" class="checks">
-                            <input type="checkbox" name="" id="check-r3"> <p>Resposta Z</p>
+                        <label for="check-r3" class="checks" name="entry.1575771089_sentinel">
+                            <input type="checkbox" name="entry.1575771089" id="check-r3" value="Resposta Z"> <p>Resposta Z</p>
                         </label>
-                        <label for="check-r4" class="checks">
-                            <input type="checkbox" name="" id="check-r4"> <p>Resposta W</p>
+                        <label for="check-r4" class="checks" name="entry.1575771089_sentinel">
+                            <input type="checkbox" name="entry.1575771089" id="check-r4" value="Resposta W"> <p>Resposta W</p>
                         </label>
                     </div>
+                    <button type="submit">Enviar</button>
                 </form>
                 <!-- fim do formulário -->
             </div>
+            <iframe style="display: none;" name="prox" src="https://docs.google.com/forms/d/e/1FAIpQLSfRTj1N5-k_E8AsLSN_3M9pcVqriI77GcMsicY3mmcRfB6QaQ/formResponse" frameborder="0"></iframe>
             <!-- fim folha formulário -->
+            <div class="thanks" id="thanks">
+                <h1>Agradecemos sua resposta! </h1> <p>Assim que o documentário estiver pronto poderá ser acessado pelo botão "Conheça" bem <a href="#start">aqui</a>. Se você achar que pode contribuir com algum material ou enviar alguma feedback pará nós, por favor não hesite em nós mandar um email em <span>testehistafrica@gmail.com</span></p>
+                <img src="img/confetti.gif" alt="">
+            </div>
         </div>
         <!-- fim do container (flexes e form) -->
         <!-- rodapé da página -->
