@@ -211,9 +211,8 @@ body{
     
     padding: 20px 0 20px 0;
 
-    border: 1px solid rgb(184, 184, 184);
+    border: 1px solid rgb(214, 214, 214);
     border-radius: 3px;
-
 }
 
 .flex .about{
@@ -248,9 +247,9 @@ body{
 
     text-align: justify;
 
-    color: rgb(40, 42, 43);
+    color: rgb(57, 57, 58);
 
-    line-height: 1.8;
+    line-height: 1.9;
 
     text-indent: 4ch;
 }
@@ -292,6 +291,7 @@ body{
 
 .container .form{
     width: 100%;
+    min-width: 900px;
     height: fit-content;
 
     display: flex;
@@ -317,7 +317,7 @@ body{
 }
 
 
-.form .title{
+.form .header-form .title{
     width: 100%;
     height: fit-content;
 
@@ -328,23 +328,9 @@ body{
     justify-content: center;
 }
 
-.form h1{
+.form .header-form .title h1{
     font-family: LexendBold;
     color: rgb(41, 41, 41);
-}
-
-.form .pergunta{
-    width: 80%;
-    height: fit-content;
-    margin: 5px;
-}
-
-.form .pergunta p{
-    font-family: LexendMedium;
-    font-size: 14px;
-
-    line-height: 1.8;
-
 }
 
 .form form{
@@ -358,7 +344,24 @@ body{
     min-height: fit-content;
 
     padding: 20px 0 80px 0;
+}
 
+form .pergunta{
+    width: 80%;
+    height: fit-content;
+    margin: 5px;
+}
+
+form .pergunta p{
+    font-family: LexendMedium;
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+form .resposta{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(50, 51, 56);
 }
 
 form .resposta-radio{
@@ -373,7 +376,7 @@ form .resposta-radio label{
     margin: 7px;
 }
 
-form .resposta{
+form .resposta-text{
     width: 80%;
     height: 50px;
 
@@ -398,7 +401,7 @@ form .label-name .content-name{
     height: fit-content;
 }
 
-form .resposta input + .label-name .content-name::after{
+form .resposta-text input + .label-name .content-name::after{
     content: '';
     width: 100%;
     height: 2px;
@@ -411,13 +414,13 @@ form .resposta input + .label-name .content-name::after{
     transition: 0.2s;
 }
 
-form .resposta input:focus + .label-name .content-name::after,
-form .resposta input:valid + .label-name .content-name::after{
+form .resposta-text input:focus + .label-name .content-name::after,
+form .resposta-text input:valid + .label-name .content-name::after{
     right: 0px; 
     bottom: -25px;   
 }
 
-form .resposta input{
+form .resposta-text input{
     position: absolute;
     bottom: 0;
     left: 2px;
@@ -431,7 +434,7 @@ form .resposta input{
     border-bottom: 1px solid rgb(34, 34, 34);
 }
 
-form .resposta .label-name{
+form .resposta-text .label-name{
     position: absolute;
     bottom: 0;
     left: 2px;
@@ -439,20 +442,18 @@ form .resposta .label-name{
     pointer-events: none;
 }
 
-form .resposta .label-name .content-name{
+form .resposta-text .label-name .content-name{
     font-size: 16px;
-    color: rgb(48, 48, 48);
+    color: rgb(153, 153, 153);
     position: absolute;
 
     bottom: 0;
     transition: 0.2s;
-
-    font-family: 'LexendRegular';
 }
 
 
-form .resposta input:focus + .label-name .content-name,
-form .resposta input:valid + .label-name .content-name{
+form .resposta-text input:focus + .label-name .content-name,
+form .resposta-text input:valid + .label-name .content-name{
     bottom: 25px;
     font-size: 13px;
     color: rgb(0, 95, 167);
@@ -461,7 +462,6 @@ form .resposta input:valid + .label-name .content-name{
 form .resposta-check{
     width: 80%;
     height: fit-content;
-
 
     position: relative;
 
@@ -475,26 +475,22 @@ form .resposta-check{
     overflow: hidden;
 }
 
-form .checks{
+form .resposta-check .checks{
     display: flex;
+
+    margin: 1px 0 1px 0;
+
+    width: fit-content;
+    height: fit-content;
 
     align-items: center;
 }
-
 
 form .resposta-check .checks input{
     margin: 10px;
     width: 15px;
     height: 15px;
 }
-
-form .resposta-check .checks p{
-    color: rgb(43, 43, 43);
-    font-family: LexendMedium;
-    font-size: 14px;
-
-}
-
 
 footer{
     height: 80px;
@@ -533,17 +529,7 @@ footer p{
     .flexes{
     width: 85%;
     }
-    .flex:nth-child(2){
-        flex-direction: column;
-        width: 100%;
-        height: fit-content;
-        display: flex;
-        align-items: center;
-        justify-content: center;
 
-
-        padding: 5px;
-    }
     .flex:nth-child(1){
         flex-direction: column-reverse;
         width: 100%;
@@ -554,6 +540,17 @@ footer p{
         padding: 5px;
     }
 
+    .flex:nth-child(2){
+        flex-direction: column;
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        padding: 5px;
+    }
+    
     .flex .about{
         width: 100%;
         height: 50%;
@@ -562,30 +559,38 @@ footer p{
     .flex .image{
         height: 50%;
         width: 100%;
+
+        margin-bottom: 15px;
     }
-    .flex .image img{
-        width: 100%;
-        max-width: 100px;
-    }
+
     .flex .image:nth-child(1) img{
         width: 100%;
         min-width: 200px;
         max-width: 200px;
     }
-
-    .form{
+    .flex .image:nth-child(2) img{
         width: 100%;
+        min-width: 115x;
+        max-width: 115px;
     }
 
-    .form .pergunta{
+    .container .form{
+        width: 100%;
+        min-width: fit-content;
+    }
+
+    .form form{
+        width: 95%;
+    }
+
+    form .pergunta{
         width: 95%;
         height: fit-content;
         margin: 5px;
     }
 
-    .form .resposta, .form .resposta-check, .form .resposta-radio{
+    form .resposta{
         width: 90%;
     }
-
 
   }
