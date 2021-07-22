@@ -61,6 +61,50 @@ body{
     background-color: rgb(240, 240, 240);
 }
 
+.loading{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    justify-content: center;
+    align-items: center;
+    
+    z-index: 1000;
+    
+    background-color: rgba(255, 255, 255, 0.74);
+
+    display: none; 
+    /* para flex */
+}
+
+.loading .circle{
+    width: 30px;
+    height: 30px;
+
+    position: fixed;
+
+    border-radius: 100%;
+
+    top: 50%;
+    left: 50%;
+
+    border-left: 7px solid rgb(68, 30, 155);
+    border-right: 7px solid  rgb(68, 30, 155);
+    border-top: 7px solid  rgb(68, 30, 155);
+    border-bottom: 7px solid transparent;
+
+    animation: loading 0.7s linear infinite;
+}
+
+@keyframes loading {
+    from{
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 .start{
     display: flex;
     flex-direction: column;
@@ -628,7 +672,7 @@ form button{
     position: relative;
 
     margin-bottom: 120px;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
 
@@ -695,15 +739,20 @@ footer{
     justify-content: center;
     align-items: center;
 
-    background-color: rgb(21, 21, 21);
+    background-color: rgb(233, 233, 233);
 }
 
 footer p{
-    color: rgb(130, 130, 130);
+    color: rgb(24, 24, 24);
     font-family: 'poppinsLight';
     font-size: 13px;
 
     position: relative;
+}
+
+footer p a{
+    color: rgb(24, 24, 24);
+    text-decoration: none;
 }
 
 @media only screen and (max-width: 800px) {
