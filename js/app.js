@@ -24,21 +24,21 @@ function send(){
 
     for(let i = 0; i < req1.length; i++){
         if( req1[i].checked == true){
-            console.log(req1[i].value,'esta checado')
+            // console.log(req1[i].value,'esta checado')
             totalReq++
         }
     }
     for(let i = 0; i < req2.length; i++){
         if( req2[i].checked == true){
-            console.log(req2[i].value,'esta checado')
+            // console.log(req2[i].value,'esta checado')
             totalReq++
         }
     }
 
-        if( req3.value.length != 0){
-            console.log(req3.value,'esta checado')
-            totalReq++
-        }
+    if( req3.value.length != 0){
+        // console.log(req3.value,'esta checado')
+        totalReq++
+    }
 
         console.log(totalReq)
 
@@ -62,6 +62,21 @@ function send(){
         setTimeout(function(){
             window.location.replace(window.location.pathname + '#thanks')
         }, 1000)
+
+
+        setTimeout(function(){
+            var resps = document.querySelectorAll('.resposta')
+            resps.forEach(e => {
+                e.style.backgroundColor='rgba(222, 238, 224, 0.35)'
+            })
+            var sendBtn = document.getElementById('sendBtn')
+            sendBtn.style.backgroundColor='rgb(99, 99, 99)'
+            sendBtn.style.pointerEvents='none'
+            sendBtn.style.userSelect='none'
+        })
+
+    } else {
+        alert('Opa, você se esqueceu de algo!')
     }
 
 
