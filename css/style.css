@@ -61,6 +61,28 @@ body{
     background-color: rgb(240, 240, 240);
 }
 
+::-webkit-scrollbar{
+    width: 9px;
+    border-radius: 40px;
+}
+
+::-webkit-scrollbar-thumb{
+    border-radius: 40px;
+    background-color: rgb(59, 15, 146);
+}
+::-webkit-scrollbar-track{
+    border-radius: 40px;
+}
+::-webkit-scrollbar-corner{
+    border-radius: 40px;
+    background-color: red;
+}
+
+::-webkit-scrollbar-button{
+    background-color: rgb(59, 15, 146);
+    height: 0px;
+}
+
 /* seta roll for more */
 
 .start .info .seta{
