@@ -521,6 +521,10 @@ form .resposta{
     color: rgb(50, 51, 56);
 }
 
+form .resposta label, form .resposta input{
+    cursor: pointer;
+}
+
 form .resposta-radio{
     margin: 20px 0 40px 0;
     display: flex;

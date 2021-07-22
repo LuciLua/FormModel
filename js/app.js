@@ -68,6 +68,8 @@ function send(){
             var resps = document.querySelectorAll('.resposta')
             resps.forEach(e => {
                 e.style.backgroundColor='rgba(222, 238, 224, 0.35)'
+                e.style.pointerEvents='none'
+                e.style.cursor='default'
             })
             var sendBtn = document.getElementById('sendBtn')
             sendBtn.style.backgroundColor='rgb(99, 99, 99)'
