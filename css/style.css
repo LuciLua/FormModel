@@ -285,12 +285,15 @@ body{
     text-decoration: none;
     color: #fff;
 
-    background-color: rgb(24, 133, 250);
+    background-color: rgb(0, 123, 255);
     border-radius: 3px;
 
     padding: 9px 13px 9px 13px;
 
     position: relative;
+}
+.info .buttons button a:hover{
+   background-color: rgb(24, 120, 223);
 }
 
 .info .buttons button:nth-child(1){
@@ -300,19 +303,11 @@ body{
     cursor: not-allowed;
 }
 
-.info .buttons button:nth-child(2){
-    background-color: rgb(24, 133, 250);
-    color: #fff;
-}
 
 /* .info .buttons button:nth-child(1):hover{
     background-color: rgba(211, 226, 255, 0.672);
 } */
 
-.info .buttons button:nth-child(2):hover{
-    background-color: rgb(21, 119, 223);
-    color: #fff;
-}
 
 .info h1{
     font-family: poppinsBold;
@@ -384,7 +379,7 @@ body{
 
 .flex .about h1{
     font-family: LexendBold;
-    font-size: 3vh;
+    font-size: clamp(18px, 3vh, 30px);
     color: rgb(43, 43, 43);
 
 }
@@ -393,7 +388,7 @@ body{
     font-family: LexendMedium;
     font-size: 15px;
 
-    color: rgb(189, 189, 189);
+    color: rgb(111, 111, 111);
     margin-bottom: 40px;
 }
 
@@ -754,7 +749,7 @@ form .resposta-check{
 form .resposta-check .checks{
     display: flex;
 
-    margin: 1px 0 1px 0;
+    margin: 5px 0 5px 0;
 
     width: fit-content;
     height: fit-content;
@@ -764,8 +759,14 @@ form .resposta-check .checks{
 
 form .resposta-check .checks input{
     margin: 10px;
+
     width: 15px;
+    max-width: 15px;
+    min-width: 15px;
+
     height: 15px;
+    max-height: 15px;
+    min-height: 15px;
 }
 
 form button{
@@ -776,7 +777,7 @@ form button{
     padding: 13px 37px 13px 37px;
     position: relative;
 
-    background-color: rgb(24, 133, 250);
+    background-color: rgb(0, 123, 255);
     border-radius: 4px;
 
     color: #fff;
@@ -786,13 +787,6 @@ form button{
 
     cursor: pointer;
 }
-
-.req:valid + #sendBtn{
-    background-color: red;
-    width: 200px;
-}
-
-
 
 .container .thanks{
     width: 100%;
