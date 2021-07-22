@@ -66,39 +66,39 @@
                 <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfRTj1N5-k_E8AsLSN_3M9pcVqriI77GcMsicY3mmcRfB6QaQ/formResponse" method="POST" target="prox">
                     <!-- pergunta 1 -->
                     <div class="pergunta">
-                        <p>Pergunta: Quantos anos você tem?</p>
+                        <p>Pergunta: Quantos anos você tem?<span> *</span></p>
                     </div>
                     <!-- resposta 1 -->
                     <div class="resposta resposta-radio">
-                        <label for="respA" name="entry.1818396900">
-                            <input type="radio" name="entry.1818396900" id="respA" required value="Abaixo de 14">
+                        <label for="respA">
+                            <input class="req1" type="radio" name="entry.1818396900" id="respA" required value="Abaixo de 14">
                             Abaixo de 14
                         </label>
-                        <label for="respB" name="entry.1818396900">
-                            <input type="radio" name="entry.1818396900" id="respB" required value="Entre 14 e 17">
+                        <label for="respB">
+                            <input class="req1" type="radio" name="entry.1818396900" id="respB" required value="Entre 14 e 17">
                             Entre 14 e 17
                         </label>
-                        <label for="respC" name="entry.1818396900">
-                            <input type="radio" name="entry.1818396900" id="respC" required value="Entre 17 e 20">
+                        <label for="respC">
+                            <input class="req1" type="radio" name="entry.1818396900" id="respC" required value="Entre 17 e 20">
                             Entre 17 e 20
                         </label>
-                        <label for="respD" name="entry.1818396900">
-                            <input type="radio" name="entry.1818396900" id="respD" required value="Acima de 20">
+                        <label for="respD">
+                            <input class="req1" type="radio" name="entry.1818396900" id="respD" required value="Acima de 20">
                             Acima de 20
                         </label>
                     </div>
                     <!-- pergunta 2 -->
                     <div class="pergunta">
-                        <p>Pergunta: Você está no Ensino Médio atualmente?</p>
+                        <p>Pergunta: Você está no Ensino Médio atualmente? <span> *</span></p>
                     </div>
                     <!-- resposta 2 -->
                     <div class="resposta resposta-radio">  
-                        <label for="p2-respA" name="entry.1347901301">
-                            <input type="radio" name="entry.1347901301" id="p2-respA" required value="Sim">
+                        <label for="p2-respA">
+                            <input class="req2" type="radio" name="entry.1347901301" id="p2-respA" required value="Sim">
                             Sim
                         </label>
-                        <label for="p2-respB" name="entry.1347901301">
-                            <input type="radio" name="entry.1347901301" id="p2-respB" required value="Não">
+                        <label for="p2-respB">
+                            <input class="req2" type="radio" name="entry.1347901301" id="p2-respB" required value="Não">
                             Não
                         </label>
                     </div>
@@ -108,7 +108,7 @@
                     </div>
                     <!-- resposta 3 -->
                     <div class="resposta resposta-text">
-                        <input type="text" name="entry.680610014" autocomplete="off" required id="entry.680610014">
+                        <input class="req3" type="text" name="entry.680610014" autocomplete="off" required id="entry.680610014" value="">
                         <label class="label-name" for="entry.680610014" name="entry.680610014">
                             <span class="content-name">Resposta</span>
                         </label>
@@ -132,7 +132,7 @@
                             <input type="checkbox" name="entry.1575771089" id="check-r4" value="Resposta W"> <p>Resposta W</p>
                         </label>
                     </div>
-                    <button type="submit" onclick="send()">Enviar</button>
+                        <button type="submit" onclick="send()" id="sendBtn">Enviar</button>
                 </form>
                 <!-- fim do formulário -->
             </div>
@@ -145,7 +145,7 @@
         </div>
         <!-- fim do container (flexes e form) -->
         <!-- rodapé da página -->
-        <footer><p>Created by <a href="https://luci-lua.tk">@luci-lua</a></p></footer>
+        <footer><p>Developed by <a href="https://luci-lua.tk">@luci-lua</a></p></footer>
     </body>
     <script src="js/app.js"></script>
 </html>

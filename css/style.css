@@ -397,6 +397,8 @@ body{
     border-radius: 3px;
 
     margin-bottom: 80px;
+
+    overflow: hidden;
 }
 
 .container .form-hidden{
@@ -440,8 +442,6 @@ body{
     background-color: rgb(103, 56, 180);
     padding: 13px 30px 13px 30px;
 
-    border-radius: 3px;
-
     font-size: 18px;
 }
 
@@ -452,11 +452,11 @@ body{
     color: rgb(223, 204, 255);
     background-color: rgba(110, 65, 172, 0.474);
     
-    padding: 10px 30px 10px 30px;
+    padding: 6px 15px 6px 15px;
     
     border-radius: 3px;
     
-    font-size: 15px;
+    font-size: 14px;
 
     position: absolute;
     right: 6px;
@@ -495,10 +495,13 @@ body{
 form .pergunta{
     width: 80%;
     height: fit-content;
-    margin: 5px;
+    margin: 5px 0 10px 0;
 
     border-left: 3px solid rgb(127, 38, 216);
     padding-left: 10px;
+
+    background-color: rgba(237, 237, 237, 0.535);
+    padding: 4px 10px 4px 10px;
 }
 
 form .pergunta p{
@@ -538,7 +541,7 @@ form .resposta-text{
     position: relative;
 
     bottom: 0;
-    margin: 10px 0 70px 0;
+    margin: 15px 0 60px 0;
 
     overflow: hidden;
 }
@@ -584,7 +587,7 @@ form .resposta-text input{
     outline: none;
     border: none;
 
-    border-bottom: 1px solid rgb(34, 34, 34);
+    border-bottom: 1px solid rgb(49, 49, 49);
 }
 
 form .resposta-text .label-name{
@@ -600,7 +603,7 @@ form .resposta-text .label-name .content-name{
     color: rgb(153, 153, 153);
     position: absolute;
 
-    bottom: 0;
+    bottom: 1px;
     transition: 0.2s;
 }
 
@@ -663,6 +666,12 @@ form button{
 
     cursor: pointer;
 }
+
+.req:valid + #sendBtn{
+    background-color: red;
+    width: 200px;
+}
+
 
 
 .container .thanks{
@@ -813,9 +822,15 @@ footer p a{
         max-width: 115px;
     }
 
+    .container .toggle-form{
+        width: 85%;
+    }
+
     .container .form{
         width: 100%;
         min-width: fit-content;
+
+        border-radius: 0;
     }
 
     .form form{
