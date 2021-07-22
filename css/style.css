@@ -301,6 +301,8 @@ body{
 
     display: none; 
     /* para flex */
+
+    pointer-events: none;
 }
 
 .loading .circle{

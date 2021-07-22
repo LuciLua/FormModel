@@ -6,9 +6,9 @@ function toggle(){
     toggleBtn.classList.toggle('toggle-btn-b')
 }
 
-const req1 = document.querySelectorAll('.req1')
+const req1 = document.querySelectorAll('.req1') //para tipo radio required
 const req2 = document.querySelectorAll('.req2')
-var req3 = document.querySelector('.req3')
+var req3 = document.querySelector('.req3') //para tipo texto required
 
 
 
