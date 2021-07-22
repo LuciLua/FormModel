@@ -42,6 +42,16 @@
         <div class="loading" id="loading">
             <div class="circle"></div>
         </div>
+        <div class="erro" id="erro">
+            <div class="msg-erro">
+                <div class="title-sad-erro">
+                    <h1>Erro</h1>
+                    <img src="img/sad.svg" alt="">
+                </div>
+                <p>Ops... Acho que você esqueceu de responder alguma pergunta. Se atente ao símbolo <span> * </span> para as obrigatórias!</p>
+                <button onclick="fecharErro()">ok</button>
+            </div>
+        </div>
         <div class="start" id="start">
             <div class="info">
                 <div class="title">
@@ -74,7 +84,7 @@
                             Apesar de não estar na página do google forms, os dados são
                             enviados para lá, a escolha do site é uma questão mais estética.
                             Adoraríamos que você respondesse por aqui, mas se preferir você
-                            pode acessar o link por  <a href="#">aqui</a>.</p>
+                            pode acessar o link por <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfRTj1N5-k_E8AsLSN_3M9pcVqriI77GcMsicY3mmcRfB6QaQ/viewform?usp=sf_link">aqui</a>.</p>
                     </div>
                     <div class="image">
                         <img src="img/form.svg" alt="">
@@ -97,7 +107,7 @@
                 <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfRTj1N5-k_E8AsLSN_3M9pcVqriI77GcMsicY3mmcRfB6QaQ/formResponse" method="POST" target="prox">
                     <!-- pergunta 1 -->
                     <div class="pergunta">
-                        <p>Pergunta: Quantos anos você tem?<span> *</span></p>
+                        <p>Quantos anos você tem?<span> *</span></p>
                     </div>
                     <!-- resposta 1 -->
                     <div class="resposta resposta-radio">
@@ -120,7 +130,7 @@
                     </div>
                     <!-- pergunta 2 -->
                     <div class="pergunta">
-                        <p>Pergunta: Você está no Ensino Médio atualmente? <span> *</span></p>
+                        <p>Você está no Ensino Médio atualmente? <span> *</span></p>
                     </div>
                     <!-- resposta 2 -->
                     <div class="resposta resposta-radio">  
@@ -135,7 +145,7 @@
                     </div>
                     <!-- pergunta 3 -->
                     <div class="pergunta">
-                        <p>Pergunta: Reiciendis culpa quaerat at beatae similique quam nisi, aspernatur ducimus hic et qui amet numquam, distinctio id sapiente. Sit repellabt?<span> *</span></p>
+                        <p>O que você considera como uma das característica mais marcante do continente africano?<span> *</span></p>
                     </div>
                     <!-- resposta 3 -->
                     <div class="resposta resposta-text">
@@ -146,24 +156,39 @@
                     </div>
                     <!-- pergunta 4 -->
                     <div class="pergunta">
-                        <p>Pergunta: Reiciendis culpa quaerat at beatae similique quam nisi, aspernatur ducimus hic et qui amet numquam, distinctio id sapiente. Sit similique veritatis repellat?</p>
+                        <p>Marque as alternativa que você considerar como certas. Deixe em branco para nenhuma</p>
                     </div>
                     <!-- resposta 4 -->
                     <div class="resposta resposta-check">
                         <label for="check-r1" class="checks" name="entry.1575771089">
-                            <input type="checkbox" name="entry.1575771089" id="check-r1" value="Resposta X"> <p>Resposta X</p>
+                            <input type="checkbox" name="entry.1575771089" id="check-r1" value="História só é válida quando escrita"> <p>História só é válida quando escrita</p>
                         </label>
                         <label for="check-r2" class="checks" name="entry.1575771089_sentinel">
-                            <input type="checkbox" name="entry.1575771089" id="check-r2" value="Resposta Y"> <p>Resposta Y</p>
+                            <input type="checkbox" name="entry.1575771089" id="check-r2" value="A colonização na África foi um processo que durou mais de 30 anos"> <p>A colonização na África foi um processo que durou mais de 30 anos</p>
                         </label>
                         <label for="check-r3" class="checks" name="entry.1575771089_sentinel">
-                            <input type="checkbox" name="entry.1575771089" id="check-r3" value="Resposta Z"> <p>Resposta Z</p>
+                            <input type="checkbox" name="entry.1575771089" id="check-r3" value="A escravidão é própria do continente Africano"> <p>A escravidão é própria do continente Africano</p>
                         </label>
                         <label for="check-r4" class="checks" name="entry.1575771089_sentinel">
-                            <input type="checkbox" name="entry.1575771089" id="check-r4" value="Resposta W"> <p>Resposta W</p>
+                            <input type="checkbox" name="entry.1575771089" id="check-r4" value="Os europeus dominaram sozinhos o continente Africano"> <p>Os europeus dominaram sozinhos o continente Africano</p>
+                        </label>
+                        <label for="check-r5" class="checks" name="entry.1575771089_sentinel">
+                            <input type="checkbox" name="entry.1575771089" id="check-r5" value="Haviam vários formatos de escravidão"> <p>Haviam vários formatos de escravidão</p>
                         </label>
                     </div>
-                        <button type="submit" onclick="send()" id="sendBtn">Enviar</button>
+                    <!-- pergunta 5 -->
+                    <div class="pergunta">
+                        <p>Você têm algo a mais que gostaria de saber ou compartilhar conosco?</p>
+                    </div>
+                    <!-- resposta 3 -->
+                    <div class="resposta resposta-text">
+                        <input type="text" name="entry.1248149553" autocomplete="off" required value="">
+                        <label class="label-name" for="entry.1248149553">
+                            <span class="content-name">Resposta</span>
+                        </label>
+                    </div>
+                    <!-- fim perguntas e respostas -->
+                    <button type="submit" onclick="send()" id="sendBtn">Enviar</button>
                 </form>
                 <!-- fim do formulário -->
             </div>

@@ -78,9 +78,15 @@ function send(){
         })
 
     } else {
-        alert('Opa, você se esqueceu de algo!')
+        var erro = document.getElementById('erro')
+        
+        erro.style.display='flex'
     }
+}
 
 
+function fecharErro(){
+    var erro = document.getElementById('erro')
 
+    erro.style.display='none'
 }
