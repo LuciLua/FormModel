@@ -10,7 +10,7 @@
         <link rel="shortcut icon" href="img/icone.png" sizes="192x192" />
         <link rel="apple-touch-icon" href="/img/icone.png" sizes="192x192" />
         <!-- thumbnail -->
-        <meta property="og:image" content="https://form-historia-da-africa.vercel.app/img/thumb.jpg" />
+        <meta property="og:image" content="http://form-historia-da-africa.vercel.app/img/thumb.jpg" />
         <meta property="og:image:secure_url" content="https://form-historia-da-africa.vercel.app/img/thumb.jpg" /> 
         <meta property="og:image:type" content="image/jpeg" /> 
         <!-- description -->
@@ -39,9 +39,11 @@
         <meta name="apple-mobile-web-app-capable" content="yes" />
     </head>
     <body>
+        <!-- msg carregamento -->
         <div class="loading" id="loading">
             <div class="circle"></div>
         </div>
+        <!-- msg erro -->
         <div class="erro" id="erro">
             <div class="msg-erro">
                 <div class="title-sad-erro">
@@ -52,8 +54,17 @@
                 <button onclick="fecharErro()">ok</button>
             </div>
         </div>
+        <!-- inicio -->
         <div class="start" id="start">
             <div class="info">
+                <div class="seta">
+                    <div class="setas">
+                        <div class="seta-child"></div>
+                        <div class="seta-child"></div>
+                        <div class="seta-child"></div>
+                    </div>
+                    <p>ou role para baixo para saber mais</p>
+                </div>
                 <div class="title">
                     <h1>O que você sabe sobre África?</h1>
                 </div>

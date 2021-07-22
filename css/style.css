@@ -61,6 +61,96 @@ body{
     background-color: rgb(240, 240, 240);
 }
 
+/* seta roll for more */
+
+.start .info .seta{
+
+    position: absolute;
+
+    top: 20vh;
+
+    max-width: 300px;
+    width: fit-content;
+    height: fit-content;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+
+    animation: inviNotinvi 4s linear infinite;
+}
+
+@keyframes inviNotinvi {
+    0%, 100%{
+        opacity: 0%;
+    }    
+    30%{
+        opacity: 0%;
+    }
+    80%{
+        opacity: 100%;
+    }
+}
+
+.info .seta p{
+    display: inline;
+    color: rgb(63, 63, 63);
+
+    font-family: 'PoppinsLight';
+}
+
+.info .seta .setas{
+    position: absolute;
+    top: 30px;
+}
+
+.info .seta .setas .seta-child{
+
+    width: 17px;
+    height: 17px;
+
+    transform: rotate(315deg);
+
+    border-top: transparent 1px solid;
+    border-bottom: rgb(90, 90, 90) 1px solid;
+    border-left:  rgb(90, 90, 90) 1px solid;
+    border-right: transparent 1px solid;
+
+    position: absolute;
+}
+
+@keyframes topDown {
+    0%, 100%{
+       margin-top: 0px;
+    }
+    50%{
+        margin-top: 10px;
+    }    
+}
+
+.seta .seta-child:nth-child(1){
+    top: 1px;
+    opacity: 20%;
+    animation: topDown 1.8s linear infinite;
+
+}
+.seta .seta-child:nth-child(2){
+    top: 10px;
+    opacity: 50%;
+    animation: topDown 1.8s linear infinite;
+
+}
+.seta .seta-child:nth-child(3){
+    top: 20px;
+    opacity: 70%;
+    animation: topDown 1.8s linear infinite;
+
+}
+
+
+/* msg erro */
 .erro{
     position: absolute;
     width: 100%;
@@ -74,8 +164,8 @@ body{
     background-color: rgba(255, 255, 255, 0.74);
 
     display: none; 
-    /* display: flex; */
-    /* para flex */
+ 
+    z-index: 1000;
 }
 
 .erro .msg-erro{
@@ -172,6 +262,9 @@ body{
     background-color: rgb(90, 41, 140);
 }
 
+
+/* msg loaging */
+
 .loading{
     position: absolute;
     width: 100%;
@@ -215,6 +308,8 @@ body{
         transform: rotate(360deg);
     }
 }
+
+/* inicio */
 
 .start{
     display: flex;
