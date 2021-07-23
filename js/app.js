@@ -66,7 +66,7 @@ function send(){
             var sendBtn = document.getElementById('sendBtn')
             sendBtn.style.backgroundColor='rgb(99, 99, 99)' //gray
             sendBtn.style.pointerEvents='none' // não manda denovo
-            sendBtn.style.userSelect='none' //não clicavel
+            sendBtn.style.cursor='default' //não clicavel
         }, 2100)
 
     } else {

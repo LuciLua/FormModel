@@ -734,6 +734,8 @@ form .pergunta p{
     font-family: LexendMedium;
     font-size: 15px;
 
+    padding: 10px;
+
     line-height: 1.8;
 }
 
@@ -821,7 +823,7 @@ form .resposta-text input{
     outline: none;
     border: none;
 
-    border-bottom: 1px solid rgb(49, 49, 49);
+    border-bottom: 1px solid rgb(109, 109, 109);
 }
 
 form .resposta-text .label-name{
@@ -834,7 +836,7 @@ form .resposta-text .label-name{
 
 form .resposta-text .label-name .content-name{
     font-size: 16px;
-    color: rgb(153, 153, 153);
+    color: rgb(75, 75, 75);
     position: absolute;
 
     bottom: 1px;
