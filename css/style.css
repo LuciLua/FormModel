@@ -101,19 +101,8 @@ body{
 
     flex-direction: column;
 
-    animation: inviNotinvi 4s linear infinite;
-}
-
-@keyframes inviNotinvi {
-    0%, 100%{
-        opacity: 0%;
-    }    
-    30%{
-        opacity: 0%;
-    }
-    80%{
-        opacity: 100%;
-    }
+    pointer-events: none;
+    user-select: none;
 }
 
 .info .seta p{
@@ -426,9 +415,17 @@ body{
 }
 
 
-/* .info .buttons button:nth-child(1):hover{
-    background-color: rgba(211, 226, 255, 0.672);
-} */
+.info .buttons button:nth-child(1):hover::after{
+    content: '(Em breve)';
+    position: absolute;
+    left: -10px;
+    top: 20px;
+
+    opacity: 40%;
+
+    white-space: nowrap;
+
+}
 
 
 .info h1{
